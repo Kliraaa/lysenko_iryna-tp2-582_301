@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://cpbtahp82b2m8"]
+
+[ext_resource type="Texture2D" uid="uid://3fl8l3m3ali8" path="res://assets/medias/personnages/knight/_Idle.png" id="1_x5vee"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4g0p"]
+atlas = ExtResource("1_x5vee")
+region = Rect2(40, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_meltr"]
+atlas = ExtResource("1_x5vee")
+region = Rect2(160, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6r20"]
+atlas = ExtResource("1_x5vee")
+region = Rect2(280, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w8sg"]
+atlas = ExtResource("1_x5vee")
+region = Rect2(400, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dora"]
+atlas = ExtResource("1_x5vee")
+region = Rect2(520, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk0jy"]
+atlas = ExtResource("1_x5vee")
+region = Rect2(640, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kikqj"]
+atlas = ExtResource("1_x5vee")
+region = Rect2(760, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sokty"]
+atlas = ExtResource("1_x5vee")
+region = Rect2(880, 40, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qs7y0"]
+atlas = ExtResource("1_x5vee")
+region = Rect2(1000, 40, 40, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rb2oc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4g0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_meltr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6r20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w8sg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dora")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk0jy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kikqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sokty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qs7y0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[node name="chevalier" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(201.5, 251.5)
+scale = Vector2(8.825, 8.825)
+sprite_frames = SubResource("SpriteFrames_rb2oc")
+frame_progress = 0.2537117

@@ -11,7 +11,7 @@ position = Vector2(390, 114)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_yq7bi")
 region_enabled = true
-region_rect = Rect2(255.90227, 63.73625, 128.9258, 64.27925)
+region_rect = Rect2(255.902, 63.7363, 128.926, 64.2793)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.5)

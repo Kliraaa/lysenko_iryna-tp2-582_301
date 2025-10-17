@@ -8,3 +8,44 @@ Le jeu est un petit platformer dans un château médiéval. Le joueur contrôle 
 <img src="knight-gif.gif" width = "700px">
 https://brullov.itch.io/2d-platformer-asset-pack-castle-of-despair
 https://aamatniekss.itch.io/fantasy-knight-free-pixelart-animated-character
+
+## Intention
+
+Ce projet vise à créer un petit jeu de plateforme où le joueur contrôle un personnage capable de courir, sauter et interagir avec des obstacles.
+L’objectif est de démontrer une structure de scène claire, une gestion fluide des animations et une bonne organisation du code.
+
+## Arborescence de la scène principale
+MainScene.tscn
+│
+├── Player (CharacterBody2D)
+│   ├── AnimatedSprite2D — gère les animations (idle, courir, saut_up, tomber-saut_down)
+│   ├── AudioStreamPlayer2D — joue les sons de pas
+│   ├── CollisionShape2D — délimite le corps du joueur
+│   └── Timer (facultatif) — pour les contrôles ou délais
+│
+├── Ground (StaticBody2D)
+│   └── CollisionShape2D — surface du sol
+│
+├── Spikes (Area2D)
+│   ├── Sprite2D — image des piques
+│   └── CollisionShape2D — zone de détection (killzone)
+│
+└── Camera2D — suit le joueur
+
+## Instructions d’opération
+
+Déplacement : flèches gauche/droite ou touches A / D
+
+Saut : touche Espace ou W
+
+Objectif : éviter les piques et atteindre la fin du niveau
+
+Sons : les pas se déclenchent automatiquement quand le joueur marche
+
+## Notes techniques
+
+Le son des pas est en boucle (loop = true) et ne joue que lorsque le joueur est sur le sol.
+
+Les animations sont gérées via AnimatedSprite2D dans le script player.gd.
+
+Le système de gravité et de saut utilise les méthodes is_on_floor() et velocity.y.
